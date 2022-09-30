@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  border: 5px solid black;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container {
+  background-image: var(--gradient-3);
+
+  @media (--OSdark) {
+    background-image: var(--gradient-13);
+  }
+}
+p {
+  font-size: var(--font-size-fluid-0);
+}
+.container > div {
+  height: 300px;
+  width: 250px;
+  background-color: blueviolet;
+  margin: 10px auto;
+  padding: 10px 10px;
+  text-align: justify;
+  font-size: 0.7rem;
+}
+
+.satu {
+  background-image: var(--gradient-15);
+
+  @media (--OSdark) {
+    background-image: var(--gradient-14);
+  }
+}
+
+/* Phone */
+@media (min-width: 300px) {
+  .container {
+    background-color: brown;
+  }
+}
+/* Tablet */
+@media (min-width: 768px) {
+  .container {
+    background-color: rgb(36, 197, 31);
+  }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+  .container {
+    background-color: rgb(228, 231, 34);
+  }
+}
+h1 {
+  font-size: clamp(20px, 3vw + 1px, 30px); /*1rem = 20pxl*/
+}
